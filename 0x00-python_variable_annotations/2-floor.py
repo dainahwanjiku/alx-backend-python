@@ -4,6 +4,6 @@ function on how to work out floor
 """
 
 
-def floor(n: float) ->: float
+def floor(n: float) -> float:
     """this is the floor work"""
-    return float(n)
+    return float(floor)
