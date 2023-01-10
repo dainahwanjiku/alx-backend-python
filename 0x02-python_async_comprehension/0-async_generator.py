@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""
-a coroutine that takes no arguments
-"""
 
-import asyncio
-import random
+""" Async Comprehensions """
+
+from asyncio import sleep
+from random import uniform
+from typing import Generator
 
 
-async def async_generator():
-    """ loops 10 times async wait 1 sec then yield random num"""
-    i = random.uniform(0, 10)
-    await asyncio.sleep(1)
-    yield i
+async def async_generator() -> Generator[float, None, None]:
+    """ Async Generator """
+    for _ in range(10):
+        await sleep(1)
+        yield uniform(0, 10)
